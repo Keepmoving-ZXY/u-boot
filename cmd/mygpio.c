@@ -59,7 +59,7 @@ static int do_mygpio(struct cmd_tbl *cmdtp, int flag, int argc,
 	target_bit = argv[2][1] - '0';
 	dr_reg_addr = gpio_base_addr[index];
 	if (argv[2][0] == 'C' || argv[2][0] == 'D') {
-		dr_reg_addr += 0x8;
+		dr_reg_addr += 0x4;
 		dr_reg_name = dr_reg_high_name;
 		if (argv[2][0] == 'D')
 			target_bit += 0x8;
