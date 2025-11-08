@@ -76,12 +76,12 @@ static int do_mygpio(struct cmd_tbl *cmdtp, int flag, int argc,
 	reg_val_low = 1 << target_bit;
 	reg_val_high = 1 << target_bit;
 	reg_val = (uint32_t)(reg_val_high << 16) | reg_val_low;
-	printf("\t\tpull-up: 0x%x\n", reg_val);
+	printf("\t\toutput 1: 0x%x\n", reg_val);
 
 	reg_val_low = 0;
 	reg_val_high = 1 << target_bit;
 	reg_val = (uint32_t)(reg_val_high << 16) | reg_val_low;
-	printf("\t\tpull-down: 0x%x\n", reg_val);
+	printf("\t\toutput 0: 0x%x\n", reg_val);
 
 	return 0;
 }
